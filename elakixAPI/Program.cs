@@ -12,8 +12,7 @@ builder.Services.AddSwaggerGen();
 
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddSingleton<IDbConnection>(db => new SqlConnection(connectionString));
-
+builder.Services.AddTransient<IDbConnection>(sp => new SqlConnection(connectionString));
 
 var app = builder.Build();
 
