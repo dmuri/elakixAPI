@@ -14,19 +14,30 @@ builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddTransient<IDbConnection>(sp => new SqlConnection(connectionString));
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "MyCorsPolicy",
+        policy =>
+        {
+            policy.WithOrigins("https://elakixclient.azurewebsites.net", "http://localhost:5173")
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+//if (app.Environment.IsDevelopment())
+//{
+app.UseSwagger();
+app.UseSwaggerUI();
+//}
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
+app.UseCors("MyCorsPolicy");
 app.MapControllers();
 
 app.Run();
