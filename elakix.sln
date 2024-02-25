@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "elakixAPI", "elakixAPI\elakixAPI.csproj", "{30FF988A-1947-40CF-84A0-D539AFBC3DC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30FF988A-1947-40CF-84A0-D539AFBC3DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30FF988A-1947-40CF-84A0-D539AFBC3DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30FF988A-1947-40CF-84A0-D539AFBC3DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30FF988A-1947-40CF-84A0-D539AFBC3DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {390A3FD9-6726-495C-81BE-6D6026BF098C}
+	EndGlobalSection
+EndGlobal
